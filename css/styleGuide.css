@@ -1,0 +1,254 @@
+body {
+    background: #7099B0;
+    margin: 50px;
+    padding: 5px;
+    font-family: 'Heebo', sans-serif;
+  }
+  * {
+    box-sizing:border-box;
+  }
+  /*font-family: 'Heebo', sans-serif;*/
+  /*font-family: 'Lato', sans-serif;*/
+  
+  .C1 { grid-area: C1; }
+  .C2 { grid-area: C2; }
+  .C3 { grid-area: C3; }
+  .C4 { grid-area: C4; }
+  .C5 { grid-area: C5; }
+  .C6 { grid-area: C6; }
+  .C7 { grid-area: C7; }
+  .C8 { grid-area: C8; }
+  .C9 { grid-area: C9; }
+  .PText { grid-area: PText; }
+  .SText { grid-area: SText; }
+  .BText { grid-area: BText; }
+  .TText { grid-area: TText; }
+  .TText1 { grid-area: TText; }
+  .GText { grid-area: GText; }
+  .HText { grid-area: HText; }
+  .HText1 { grid-area: HText1; }
+  /*
+  Grid 1 Layout: Primary and Secondary
+  | Text | C1 | C2 | C3 |
+  | Text | C1 | C2 |    | 
+  */
+  .grid-C1 {
+    display: grid;
+    grid-template-columns: .8fr 1fr 1fr 10fr;
+    grid-template-areas:
+    'PText C1 C2 C3'
+    'SText C4 C5 null';
+    grid-gap: 5px;
+    margin: 50px, auto;
+    padding: 10px;
+  }
+  /*
+  Grid 2 Layout: Background and Text Color
+  | Text | C1 | Text | C2 | C3 | C4 |
+  |      | C5 | Text | C6 | C7 | C8 |
+  */
+  .grid-C2 {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.8fr 1fr 1fr 10fr;
+    grid-template-areas:
+    'BText C1 TText C2 C3 C4'
+    'null C5 TText1 C6 C7 C8';
+    grid-gap: 5px;
+    margin: left auto;
+    padding: 10px;
+  }
+  /*
+    Grid 3: Grays
+  | Text | C1 | C2 | C3 | C4 |
+  */
+  .grid-C3 {
+    display:grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr 10fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'GText C1 C2 C3 C4 ';
+    grid-gap: 0px;
+    padding: 0px;
+  }
+  /*time constraint: skip Grid 4.*/
+  /*
+    Grid 5: Buttons? 
+  | Inactive | B1 | B2 |
+  | Hovered  | B1 | B2 |
+  | Pressed  | B1 | B2 |
+  */
+  .grid-C5 {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 10fr;
+    grid-template-areas:
+    'C1 C2 C3';
+    grid-gap: 5px;
+    margin:left auto;
+    padding: 10px;
+  }
+  /*GRIDS
+  future edit: a grid in a grid? overall layout is a gridded structure? do we need that here? it mostly looks linear so idk if i need that kind of structure.
+  Grid 4: Typography
+  | Header              | H1 | H1 Example | 
+  | Header description  | H2 | H2 Example |
+  |                     | H3 | H3 Example |
+  |                     | T1 | T1 Example |
+  |                     | F1 | F1 Example |
+  |                     | P  | P  Example |
+
+
+  /* Header Styles */
+  .header {
+    background-image: linear-gradient(45deg, #EFF1F3, #D4ECF2 15%, #B8DBED, #7099B0 90%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 500px;
+    height: 200px;
+    background-position: bottom;
+    border-radius: 10px;
+    
+  }
+
+  #pageTopic {
+    text-align: left;
+    font-size: 30px;
+    font-weight: 900;
+    margin:15px;
+  }
+  /* Primary Color */
+
+  .colorContainer {
+    display: inline-block;
+    border-radius: 25px;
+    margin: 15px;
+  }
+
+  .swatch {
+    border-radius: 20px;
+     height: 100px;
+     width: 100px;
+  }
+
+  .swatch:hover {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    transform:  rotateZ(45deg) scale(1.05);
+  }
+  .swatchR {
+    border-radius: 0px;
+    height: 100px;
+    width: 200px;
+  }
+  .swatchR:hover {
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    transform: scaleX(1.25);
+  }
+  .hexCode {
+     padding: 15px;
+     text-align: left;
+     color: #EFF1F3;
+  }
+  .lightCyan {
+    background-color: #D4ECF2;
+  }
+  .columbiaBlue {
+    background-color: #B8DBED;
+  }
+  .cultured { 
+    background-color: #EFF1F3;
+  }
+  .darkSkyBlue {
+    background-color: #8CBCCF;
+  }
+  .deepBlue {
+    background-color: #434A75;
+  }
+  .raisinBlack {
+    background-color: #2C2C34;
+  }
+  .darkLiver {
+    background-color: #494850;
+  }
+  .lightGray {
+    background-color:#D8D3D8;
+  }
+  .bgh {
+    background-color: #497B97;
+  }
+  /* Typography CSS */
+  .type_container {
+     display: inline-block;
+     margin: 20px;
+  }
+  .large {
+      font-size: 66px;
+      margin-bottom: 15px;
+      margin-bottom: 15px;
+      margin-top: 0;
+  }
+  .light {
+      font-weight: 100;
+  }
+  .regular {
+      font-weight: 400;
+  }
+  .medium {
+    font-weight: 500;
+  }
+  .bold {
+      font-weight: 700;
+  }
+  .typography h1 {
+      font-weight: 900;
+      font-size: 50px;
+  }
+  .typography h2 {
+      font-weight: 700;
+      font-size: 42px;
+  }
+  .typography h3 {
+      font-weight: 700;
+      font-size: 34px;
+  }
+  .typography h4 {
+      font-size: 26px;
+  }
+  .typography t1 {
+    font-size: 18px;
+  }
+  .typography f1 {
+    font-size: 20px;
+  }
+  .typography p {
+    font-size: 16px;
+  }
+
+  
+  /* UI Elements */
+  .button {
+     display: inline-block;
+     padding: 15px;
+     margin: 15px;
+     width: 150px;
+     font-size: 14px;
+     text-align: center;
+     color: white;
+  }
+  .primary {
+    color: #2C2C34;
+  }
+  .primary:hover {
+    color: #434A75;
+  }
+  .overlay {
+    background-color:#D4ECF2;
+    border-radius:20px;
+    color: #2C2C34;
+  }
+  .overlay:hover {
+    background-color:#8CBCCF;
+  }
+
+  .sectionHead {
+    border-bottom: 8px solid #DDDDDD;
+  }
+  
